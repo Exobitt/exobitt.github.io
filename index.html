@@ -6,133 +6,161 @@
     <title>Danni Petersen - CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             color: #333;
         }
-        header {
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
             background-color: #333;
             color: #fff;
-            padding: 20px 10%;
+            padding: 20px;
+            width: 30%;
             text-align: center;
         }
-        header h1 {
+        .sidebar h1 {
+            font-size: 2em;
             margin: 0;
-            font-size: 2.5em;
         }
-        header p {
-            margin: 5px 0 0;
+        .sidebar p {
+            margin: 10px 0;
         }
-        main {
-            padding: 20px 10%;
+        .sidebar .contact-info {
+            text-align: left;
+            margin-top: 30px;
         }
-        section {
-            margin-bottom: 20px;
-        }
-        h2 {
-            border-bottom: 2px solid #333;
+        .sidebar .contact-info h2 {
+            font-size: 1.2em;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
             padding-bottom: 5px;
         }
-        ul {
+        .sidebar .contact-info p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        .main-content {
+            padding: 20px;
+            width: 70%;
+        }
+        .main-content section {
+            margin-bottom: 20px;
+        }
+        .main-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .main-content p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        .experience ul {
             list-style: none;
             padding: 0;
         }
-        ul li {
-            margin-bottom: 10px;
+        .experience ul li {
+            margin-bottom: 15px;
         }
-        .contact {
-            background-color: #e4e4e9;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .contact p {
-            margin: 5px 0;
+        .experience ul li strong {
+            display: block;
+            font-size: 1.1em;
+            color: #555;
         }
         footer {
             text-align: center;
-            padding: 20px 10%;
+            padding: 10px 0;
             background-color: #333;
             color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Danni Petersen</h1>
-        <p>Freelance DevSecOps Engineer</p>
-    </header>
-    <main>
-        <section class="contact">
-            <h2>Contact</h2>
-            <p><strong>Phone:</strong> +45 23 23 29 36</p>
-            <p><strong>Email:</strong> danni@ascifiy.dk</p>
-            <p><strong>Languages:</strong> Danish, English</p>
-        </section>
-        <section>
-            <h2>Summary</h2>
-            <p>I'm a young IT professional who goes above and beyond to meet the needs of my clientele in both software engineering, cloud architecture, and DevSecOps.</p>
-        </section>
-        <section>
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <strong>Freelance DevSecOps Engineer</strong> - Danish Agency for Labour Market and Recruitment (STAR) - 03/2023 to Now
-                    <ul>
-                        <li>Spearheaded creation and deployment of high-availability Kubernetes clusters based on RKE2.</li>
-                        <li>Automated infrastructure management using Ansible and Terraform.</li>
-                        <li>Designed and maintained on-premises servers with high-availability Kubernetes and eBPF.</li>
-                        <li>Developed security protocols using Snyk and Wazuh.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Freelance Software/DevOps Engineer</strong> - Energinet Datahub - 02/2022 to 03/2023
-                    <ul>
-                        <li>Designed backend and infrastructure for open-source certificate systems.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Software Engineer</strong> - Politiken - 07/2021 to 12/2021
-                    <ul>
-                        <li>Helped build cloud-based Kafka event bus.</li>
-                        <li>Implemented CI/CD pipelines and monitoring solutions.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>DevOps Engineer</strong> - Gan Integrity - 01/2021 to 06/2021
-                    <ul>
-                        <li>General cleanup in cloud infrastructure.</li>
-                        <li>Creation of different environments (dev, staging, production, sandbox).</li>
-                        <li>Transitioned jobs from Ansible and Jenkins to GitLab CI.</li>
-                        <li>Implemented Docker, Kubernetes, and ArgoCD for deployments.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Backend/DevOps Engineer</strong> - YouTv - 05/2020 to 01/2021
-                    <ul>
-                        <li>Built backend and cloud infrastructure for a new streaming platform.</li>
-                        <li>Created microservice-based architecture and CI/CD pipelines.</li>
-                        <li>Used AWS services, Terraform, Docker, and Kubernetes extensively.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Backend/DevOps Engineer</strong> - Nuuday - 09/2016 to 05/2020
-                    <ul>
-                        <li>Developed and maintained cloud-based PVR platforms.</li>
-                        <li>Maintained on-prem servers and transitioned to cloud infrastructure.</li>
-                        <li>Used PHP, Python, Go, and Java for backend systems.</li>
-                        <li>Built CI/CD pipelines and used AWS for scaling solutions.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <p><strong>AU (Academy) in Information Technology</strong> - 2021</p>
-        </section>
-    </main>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Danni Petersen</h1>
+            <p>Freelance DevSecOps Engineer</p>
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <p><strong>Phone:</strong> +45 23 23 29 36</p>
+                <p><strong>Email:</strong> danni@ascifiy.dk</p>
+                <p><strong>Languages:</strong> Danish, English</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <section class="summary">
+                <h2>Summary</h2>
+                <p>I'm a young IT professional who goes above and beyond to meet the needs of my clientele in both software engineering, cloud architecture, and DevSecOps.</p>
+            </section>
+            <section class="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <strong>Freelance DevSecOps Engineer</strong> - Danish Agency for Labour Market and Recruitment (STAR) - 03/2023 to Now
+                        <ul>
+                            <li>Spearheaded creation and deployment of high-availability Kubernetes clusters based on RKE2.</li>
+                            <li>Automated infrastructure management using Ansible and Terraform.</li>
+                            <li>Designed and maintained on-premises servers with high-availability Kubernetes and eBPF.</li>
+                            <li>Developed security protocols using Snyk and Wazuh.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Freelance Software/DevOps Engineer</strong> - Energinet Datahub - 02/2022 to 03/2023
+                        <ul>
+                            <li>Designed backend and infrastructure for open-source certificate systems.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Software Engineer</strong> - Politiken - 07/2021 to 12/2021
+                        <ul>
+                            <li>Helped build cloud-based Kafka event bus.</li>
+                            <li>Implemented CI/CD pipelines and monitoring solutions.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>DevOps Engineer</strong> - Gan Integrity - 01/2021 to 06/2021
+                        <ul>
+                            <li>General cleanup in cloud infrastructure.</li>
+                            <li>Creation of different environments (dev, staging, production, sandbox).</li>
+                            <li>Transitioned jobs from Ansible and Jenkins to GitLab CI.</li>
+                            <li>Implemented Docker, Kubernetes, and ArgoCD for deployments.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Backend/DevOps Engineer</strong> - YouTv - 05/2020 to 01/2021
+                        <ul>
+                            <li>Built backend and cloud infrastructure for a new streaming platform.</li>
+                            <li>Created microservice-based architecture and CI/CD pipelines.</li>
+                            <li>Used AWS services, Terraform, Docker, and Kubernetes extensively.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Backend/DevOps Engineer</strong> - Nuuday - 09/2016 to 05/2020
+                        <ul>
+                            <li>Developed and maintained cloud-based PVR platforms.</li>
+                            <li>Maintained on-prem servers and transitioned to cloud infrastructure.</li>
+                            <li>Used PHP, Python, Go, and Java for backend systems.</li>
+                            <li>Built CI/CD pipelines and used AWS for scaling solutions.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="education">
+                <h2>Education</h2>
+                <p><strong>AU (Academy) in Information Technology</strong> - 2021</p>
+            </section>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 Danni Petersen</p>
     </footer>
